@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CGPA</title>
+<meta>
+<style>
+body{
+background-color:LavenderBlush;
+}
+div{
+margin:5px;
+}
+input{
+width:50%;
+padding:10px 100px;
+text-align:center;
+font-size:150%;
+font-family:Arail;
+border-radius:20px;
+}
+input:hover{
+border:3px ridge MidnightBlue;
+background-color:LightCyan;
+}
+.click{
+margin:10px 380px;
+padding:15px;
+background-color:black;
+color:white;
+font-size:120%;
+border-radius:5px;
+}
+.click:hover{
+border:3px solid grey;
+}
+</style>
+<script>
+function Result(){
+var seme1=document.getElementById("sem1");
+var seme2=document.getElementById("sem2");
+var seme3=document.getElementById("sem3");
+var seme4=document.getElementById("sem4");
+var seme5=document.getElementById("sem5");
+var seme6=document.getElementById("sem6");
+var seme7=document.getElementById("sem7");
+var seme8=document.getElementById("sem8");
+
+var sgpa1=parseFloat(seme1.value);
+var sgpa2=parseFloat(seme2.value);
+var sgpa3=parseFloat(seme3.value);
+var sgpa4=parseFloat(seme4.value);
+var sgpa5=parseFloat(seme5.value);
+var sgpa6=parseFloat(seme6.value);
+var sgpa7=parseFloat(seme7.value);
+var sgpa8=parseFloat(seme8.value);
+
+var total=document.getElementById("tot");
+var totsem=parseInt(total.value);
+
+var cgpa=(sgpa1+sgpa2+sgpa3+sgpa4+sgpa5+sgpa6+sgpa7+sgpa8)/totsem;
+var result=parseFloat(cgpa).toFixed( 2 );
+document.getElementById("res").innerHTML=result; 
+}
+</script>
+</head>
+<body>
+<div><input id="sem1" type="number" min=0.0 max=10.0 placeholder="Enter Semester1 SGPA" required><br></div>
+<div><input id="sem2" type="number" min=0.0 max=10.0 placeholder="Enter Semester2 SGPA" required><br></div>
+<div><input id="sem3" type="number" min=0.0 max=10.0 placeholder="Enter Semester3 SGPA" required><br></div>
+<div><input id="sem4" type="number" min=0.0 max=10.0 placeholder="Enter Semester4 SGPA" required><br></div>
+<div><input id="sem5" type="number" min=0.0 max=10.0 placeholder="Enter Semester5 SGPA" required><br></div>
+<div><input id="sem6" type="number" min=0.0 max=10.0 placeholder="Enter Semester6 SGPA" required><br></div>
+<div><input id="sem7" type="number" min=0.0 max=10.0 placeholder="Enter Semester7 SGPA" required><br></div>
+<div><input id="sem8" type="number" min=0.0 max=10.0 placeholder="Enter Semester8 SGPA" required><br></div>
+<div><input id="tot" type="number" min=0 max=8 placeholder="Enter number of semesters" required"><br></div>
+<div><button type="button" class="click" onclick="Result()">Calculate</button><br></div>
+<p id="res" style="margin:0px 845px 0px 387px;padding:10px;background-color:black;color:white;font-size:120%;text-align:center"></p>
+</body>
+</html>

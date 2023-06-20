@@ -1,0 +1,25 @@
+body{
+background-color:LightCyan;
+}
+#head{
+font-family:Garamond;
+color:MidnightBlue;
+font-size:160%;
+}
+#middle{
+text-align:center;
+font-size:300%;
+padding:120px;
+font-family:'Brush Script MT', cursive;
+margin:20px;
+}
+a{
+text-decoration:none;
+color:LightSeaGreen;
+}
+a:hover{
+background-color:PaleTurquoise;
+}
+.details{
+font-size:140%;
+}

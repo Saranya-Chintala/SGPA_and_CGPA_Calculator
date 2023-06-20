@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SGPA</title>
+
+<style>
+td{
+text-align:center;
+padding:10px;
+}
+.subname{
+color:red;
+}
+.click{
+margin:10px 310px;
+padding:7px;
+background-color:black;
+color:white;
+font-size:120%;
+}
+</style>
+
+<script>
+function Result() {
+  var sub1 = document.getElementById("S1");
+  var sub2 = document.getElementById("S2");
+  var sub3 = document.getElementById("S3");
+  var sub4 = document.getElementById("S4");
+  var sub5 = document.getElementById("S5");
+  var sub6 = document.getElementById("S6");
+  var sub7 = document.getElementById("S7");
+  var sub8 = document.getElementById("S8");
+  var sub9 = document.getElementById("S9");
+  var sub10 = document.getElementById("S10");
+ 
+  var credit1 = document.getElementById("C1");
+  var credit2 = document.getElementById("C2");
+  var credit3 = document.getElementById("C3");
+  var credit4 = document.getElementById("C4");
+  var credit5 = document.getElementById("C5");
+  var credit6 = document.getElementById("C6");
+  var credit7 = document.getElementById("C7");
+  var credit8 = document.getElementById("C8");
+  var credit9 = document.getElementById("C9");
+  var credit10 = document.getElementById("C10");
+
+  var gp1 = parseInt(sub1.value) * parseFloat(credit1.value);
+  var gp2 = parseInt(sub2.value) * parseFloat(credit2.value);
+  var gp3 = parseInt(sub3.value) * parseFloat(credit3.value);
+  var gp4 = parseInt(sub4.value) * parseFloat(credit4.value);
+  var gp5 = parseInt(sub5.value) * parseFloat(credit5.value);
+  var gp6 = parseInt(sub6.value) * parseFloat(credit6.value);
+  var gp7 = parseInt(sub7.value) * parseFloat(credit7.value);
+  var gp8 = parseInt(sub8.value) * parseFloat(credit8.value);
+  var gp9 = parseInt(sub9.value) * parseFloat(credit9.value);
+  var gp10 = parseInt(sub10.value) * parseFloat(credit10.value);
+
+  var totCred =
+    parseFloat(credit1.value) +
+    parseFloat(credit2.value) +
+    parseFloat(credit3.value) +
+    parseFloat(credit4.value) +
+    parseFloat(credit5.value) +
+    parseFloat(credit6.value) +
+    parseFloat(credit7.value) +
+    parseFloat(credit8.value) +
+    parseFloat(credit9.value) +
+    parseFloat(credit10.value);
+
+  var resultgpa =
+    (parseFloat(gp1) +
+     parseFloat(gp2) +
+     parseFloat(gp3) +
+     parseFloat(gp4) + 
+     parseFloat(gp5) +
+     parseFloat(gp6) + 
+     parseFloat(gp7) + 
+     parseFloat(gp8) + 
+     parseFloat(gp9) +
+     parseFloat(gp10)) / totCred;
+  var fixedNum = parseFloat(resultgpa).toFixed( 2 );
+ 
+  document.getElementById("res").innerHTML=fixedNum; 
+}
+</script>
+</head>
+<body>
+<table style="width:50%;font-family:Arail;font-size:150%">
+<tr>
+<th>SUBJECTS</th>
+<th>POINTS</th>
+<th>CREDITS</th>
+</tr>
+<tr>
+<td class="subname">Subject-1</td>
+<td>
+<input id="S1" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C1" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-2</td>
+<td>
+<input id="S2" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C2" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-3</td>
+<td>
+<input id="S3" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C3" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-4</td>
+<td>
+<input id="S4" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C4" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-5</td>
+<td>
+<input id="S5" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C5" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-6</td>
+<td>
+<input id="S6" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C6" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-7</td>
+<td>
+<input id="S7" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C7" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-8</td>
+<td>
+<input id="S8" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C8" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-9</td>
+<td>
+<input id="S9" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C9" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+<tr>
+<td class="subname">Subject-10</td>
+<td>
+<input id="S10" type="number" min=0 max=10 required>
+</td>
+<td>
+<input id="C10" type="number" min=0.0 max=10.0 required>
+</td>
+</tr>
+
+</table>
+
+<button type="button" class="click" onclick="Result()">Calculte</button>
+<p id="res" style="margin:0px 953px 0px 310px;padding:10px;background-color:black;color:white;font-size:120%;text-align:center"></p>
+</body>
+</html>
